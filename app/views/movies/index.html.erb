@@ -28,10 +28,11 @@
         <td><%= movie.title %></td>
         <td><%= movie.originaltitle %></td>
         <td><%= movie.releaseyear %></td>
-        <td><%= movie.cover %></td>
+        <td><img src="<%= movie.cover %>" height="20%" ></td>
         <td><%= movie.length %></td>
         <td><%= movie.ageres %></td>
         <td><%= movie.synopsis %></td>
+        <td><%= movie.actors %></td>
         <td><%= link_to 'Show', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
