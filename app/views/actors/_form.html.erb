@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :birthdate %>
-    <%= form.date_select :birthdate, id: :actor_birthdate %>
+    <%= form.date_select :birthdate, start_year: Date.today.year - 110, end_year: Date.today.year, id: :actor_birthdate %>
   </div>
 
   <div class="field">
