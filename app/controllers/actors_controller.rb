@@ -4,7 +4,11 @@ class ActorsController < ApplicationController
   # GET /actors
   # GET /actors.json
   def index
-    @actors = Actor.all
+    @actors = if params[:term]
+               Actor.where('name LIKE ?', "%#{params[:term]}%")
+              else
+                Actor.all
+             end
   end
 
   # GET /actors/1
@@ -71,4 +75,5 @@ class ActorsController < ApplicationController
     def actor_params
       params.require(:actor).permit(:name, :fname, :birthdate, :workingcountry)
     end
+
 end
