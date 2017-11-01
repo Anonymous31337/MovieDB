@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
+  before_action :set_actors, only: [:show, :edit, :update, :destroy]
 
   # GET /movies
   # GET /movies.json
@@ -37,6 +38,7 @@ class MoviesController < ApplicationController
   # POST /movies.json
   def create
     @movie = Movie.new(movie_params)
+    @movie.actors = Actor.s_to_actors(s_params[:actors])
 
     respond_to do |format|
       if @movie.save
@@ -54,6 +56,10 @@ class MoviesController < ApplicationController
   def update
     respond_to do |format|
       if @movie.update(movie_params)
+
+        @movie.actors = Actor.s_to_actors(params[:actors])
+        @movie.save
+
         format.html { redirect_to @movie, notice: 'Movie was successfully updated.' }
         format.json { render :show, status: :ok, location: @movie }
       else
@@ -61,6 +67,12 @@ class MoviesController < ApplicationController
         format.json { render json: @movie.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def set_actors
+    @actors_all = Actor.all_s
+    @actors = @movie.actors
+    @actors_s = Actor.actors_to_s(@actors)
   end
 
   # DELETE /movies/1

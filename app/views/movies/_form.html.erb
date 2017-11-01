@@ -21,6 +21,12 @@
     <%= form.text_field :originaltitle, id: :movie_originaltitle %>
   </div>
 
+  <p>Available Actors: <%= @actors_all %>
+  <div class="field">
+  <%= form.label :actors %>
+  <%= text_field_tag(:actors, value =  @actors_s) %>
+  </div>
+
   <div class="field">
     <%= form.label :releaseyear %>
     <%= form.number_field :releaseyear, id: :movie_releaseyear %>
