@@ -16,11 +16,6 @@
 </p>
 
 <p>
-  <strong>Cover:</strong>
-  <%= @movie.cover %>
-</p>
-
-<p>
   <strong>Length:</strong>
   <%= @movie.length %>
 </p>
@@ -33,6 +28,11 @@
 <p>
   <strong>Synopsis:</strong>
   <%= @movie.synopsis %>
+</p>
+
+<p>
+  <strong>Cover:</strong>
+  <img src="<%= @movie.cover %>" height="20%" >
 </p>
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
