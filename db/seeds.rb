@@ -53,7 +53,7 @@ fightclub = Movie.create(
     length: 180,
     ageres:18,
     synopsis:"An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soap maker, forming an underground fight club that evolves into something much, much more."
-)    
+)
 
 
 
@@ -64,11 +64,41 @@ Actor.destroy_all
 #actor1 = Actor.create(name: "Cameron", fname: "James", birthdate:1932)
 
 ldc = Actor.create(
-    name: "Leonardo di Caprio",
-    fname: "???",
+    name: "di Caprio",
+    fname: "Leonardo",
     birthdate: "11.11.1974",
     workingcountry:"USA",
 )
+
+bp = Actor.create(
+    name: "Pitt",
+    fname: "Brad",
+    birthdate: "18.12.1963",
+    workingcountry:"USA",
+)
+
+kw = Actor.create(
+    name: "Winslet",
+    fname: "Kate",
+    birthdate: "05.10.1975",
+    workingcountry:"USA",
+)
+
+jl = Actor.create(
+    name: "Leto",
+    fname: "Jared",
+    birthdate: "26.12.1971",
+    workingcountry:"USA",
+)
+
+ml = Actor.create(
+    name: "Loaf",
+    fname: "Meat",
+    birthdate: "27.09.1947",
+    workingcountry:"USA",
+)
+
+
 
 
 
