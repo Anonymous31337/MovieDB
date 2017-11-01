@@ -9,6 +9,14 @@ class MoviesController < ApplicationController
               else
                 Movie.all
               end
+    @actors = Actor.all
+
+    if actor_id = params[:actor]
+      @actor = Actor.find(actor_id)
+      @movies = @actor.movies
+    else
+      @movies = Movie.all
+    end
   end
 
   # GET /movies/1
