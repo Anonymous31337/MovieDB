@@ -31,8 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'rspec-rails', '~> 3.6'
-gem "capybara"
-
+gem "launchy"
 
 
 # Use Capistrano for deployment
