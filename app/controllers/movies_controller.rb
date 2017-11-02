@@ -10,6 +10,8 @@ class MoviesController < ApplicationController
               else
                 Movie.all
               end
+
+    @movies_with_actors = @movies.map{|movie|[movie, movie.actors]}
     @actors = Actor.all
 
     if actor_id = params[:actor]
@@ -18,6 +20,7 @@ class MoviesController < ApplicationController
     else
       @movies = Movie.all
     end
+
   end
 
   # GET /movies/1
