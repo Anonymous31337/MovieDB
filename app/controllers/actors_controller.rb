@@ -1,4 +1,5 @@
 class ActorsController < ApplicationController
+  http_basic_authenticate_with name: "Cedric-Timethy", password: "abd", except: [:index, :show]
   before_action :set_actor, only: [:show, :edit, :update, :destroy]
 
   # GET /actors

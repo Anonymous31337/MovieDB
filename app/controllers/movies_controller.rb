@@ -1,10 +1,13 @@
 class MoviesController < ApplicationController
+  http_basic_authenticate_with name: "Cedric-Timethy", password: "AWD", except: [:index, :show]
+
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
   before_action :set_actors, only: [:show, :edit, :update, :destroy]
 
   # GET /movies
   # GET /movies.json
   def index
+
     @movies = if params[:term]
                 Movie.where('name LIKE ?', "%#{params[:term]}%")
               else
@@ -40,6 +43,7 @@ class MoviesController < ApplicationController
   # POST /movies
   # POST /movies.json
   def create
+    @movie = Movie.find(params[:movie_id])
     @movie = Movie.new(movie_params)
     @movie.actors = Actor.s_to_actors(s_params[:actors])
 
