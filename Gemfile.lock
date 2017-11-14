@@ -80,8 +80,6 @@ GEM
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
 #<<<<<< RSpecBranch
-    launchy (2.4.3)
-      addressable (~> 2.3)
 #______________
     jquery-rails (4.3.1)
       rails-dom-testing (>= 1, < 3)
