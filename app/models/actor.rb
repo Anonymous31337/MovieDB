@@ -8,7 +8,7 @@ class Actor < ApplicationRecord
 	  def self.s_to_actors(s)
 		    s.split(',').map(&:strip).map do |name|
 
-			      # Category.where(name: name).first_or_create
+			      # Actor.where(name: name).first_or_create
 			      Actor.find_or_create_by(name: name)
 			    end
 		end

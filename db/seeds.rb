@@ -107,5 +107,5 @@ avatar.actors = []
 thegg.actors = [ldc]
 thewows.actors = [ldc]
 shutterisland.actors =[ldc]
-
+fightclub.actors = [jl, ml, bp]
 
