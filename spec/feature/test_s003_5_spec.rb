@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 's003: privileged user' do
+describe 's003/5: privileged user' do
   context '(when logged in)' do
     before :each do
       user = User.create(email: 'Peter', password: 'PetersPasswort', password_confirmation: 'PetersPasswort')
