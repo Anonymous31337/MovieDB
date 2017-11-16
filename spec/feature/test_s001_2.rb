@@ -1,10 +1,10 @@
-require 'capybara/rails'
 require 'rails_helper'
 
 describe 's001/2: user can see a list of movies and their actors' do
 
   it 'shows the movies' do
-    visit root_path
+    #visit root_path
+    visit movie_path
     # following movies should already exist from seeds
     expect(page).to have_content("Avatar")
     expect(page).to have_content("Der große Gatsby")

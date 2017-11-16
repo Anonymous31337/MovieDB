@@ -1,4 +1,3 @@
-require 'capybara/rails'
 require 'rails_helper'
 
 describe 's001/2: user can see a list of movies and their actors' do

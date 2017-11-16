@@ -1,4 +1,3 @@
-require 'capybara/rails'
 require 'rails_helper'
 
 describe 's003: privileged user' do
