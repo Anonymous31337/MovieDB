@@ -98,9 +98,20 @@ ml = Actor.create(
     workingcountry:"USA",
 )
 
+ho = Genre.create(
+    name: "Horror")
 
+co = Genre.create(
+    name: "Comedy")
 
+ac = Genre.create(
+    name: "Action")
 
+sf = Genre.create(
+    name: "Science Fiction")
+
+fa = Genre.create(
+    name: "Fantasy")
 
 # Schauspielern filmen zuordnen
 avatar.actors = []
