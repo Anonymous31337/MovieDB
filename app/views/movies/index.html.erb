@@ -10,21 +10,21 @@
 
 <table>
   <thead>
-  <tr>
-    <th>Title</th>
-    <th>Originaltitle</th>
-    <th>Releaseyear</th>
-    <th>Cover</th>
-    <th>Length</th>
-    <th>Ageres</th>
-    <th>Synopsis</th>
-    <th>Actors</th>
-    <th colspan="3"></th>
-  </tr>
+    <tr>
+      <th>Title</th>
+      <th>Originaltitle</th>
+      <th>Releaseyear</th>
+      <th>Cover</th>
+      <th>Length</th>
+      <th>Ageres</th>
+      <th>Synopsis</th>
+      <th>Actors</th>
+      <th colspan="3"></th>
+    </tr>
   </thead>
 
   <tbody>
-  <% @movies.each do |movie| %>
+    <% @movies.each do |movie| %>
       <tr>
         <td><%= link_to movie.title, movie %></td>
         <td><%= movie.originaltitle %></td>
@@ -33,11 +33,11 @@
         <td><%= movie.length %></td>
         <td><%= movie.ageres %></td>
         <td><%= movie.synopsis %></td>
-         <td><% @movies_with_actors.each do | movie | %>  <% end %></td>
+
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-  <% end %>
+    <% end %>
   </tbody>
 </table>
 
