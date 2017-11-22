@@ -1,6 +1,6 @@
 require 'rails_helper'
-
-describe 's003/5: privileged user' do
+require 'spec_helper'
+describe 's003/5: privileged user', :type => :feature do
   context '(when logged in)' do
     before :each do
       user = User.create(email: 'Peter', password: 'PetersPasswort', password_confirmation: 'PetersPasswort')
@@ -8,17 +8,17 @@ describe 's003/5: privileged user' do
     end
 
   it 'it can add a new movie' do
-    visit new_movie_path
+    visit "/movies/new"
 
     # note that these are all ids rather than texts.
     fill_in 'movie_title', with: 'Disneys Eine Weihnachtsgeschichte'
-    fill_in 'movie_originaltitle', with: 'A Christmas Carol'
-    fill_in 'movie_actors', with: ''
-    fill_in 'movie_releaseyear', with: 2009
-    fill_in 'movie_cover', with: 'Url'
-    fill_in 'movie_length', with: 96
-    fill_in 'movie_cover', with: ''
-    fill_in 'movie_synopsis', with: 'Weihnachten, Scrooge (böse), Geister, noch mehr Weihnachten, Scrooge (freundlich), alle glücklich'
+    fill_in 'movie[originaltitle]', with: 'A Christmas Carol'
+    fill_in 'movie[actors]', with: ''
+    fill_in 'movie[releaseyear]', with: 2009
+    fill_in 'movie[cover]', with: 'Url'
+    fill_in 'movie[length]', with: 96
+    fill_in 'movie[cover]', with: ''
+    fill_in 'movie[synopsis]', with: 'Weihnachten, Scrooge (böse), Geister, noch mehr Weihnachten, Scrooge (freundlich), alle glücklich'
 
     click_button 'Create Movie'
 
