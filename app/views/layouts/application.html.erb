@@ -21,12 +21,10 @@
       <%= link_to "MOVIES", '#', id: "logo" %>
       <nav>
         <ul class="nav navbar-nav navbar-right">
-          <li class="nav-item"><%= link_to "MOVIES",   'movies#index' %></li>
-          <li class="nav-item"><%= link_to "ACTORS",   'actors#index' %></li>
           <% if user_signed_in? %>
-              <li class="nav-item">
-                <%= link_to('LOGOUT', destroy_user_session_path, method: :delete) %>
-              </li>
+              <li class="nav-item"><%= link_to "MOVIES",   'movies#index' %></li>
+              <li class="nav-item"><%= link_to "ACTORS",   'actors#index' %></li>
+              <li class="nav-item"><%= link_to('LOGOUT', destroy_user_session_path, method: :delete) %></li>
           <% else %>
               <li class="nav-item">
                 <%= link_to('LOGIN', new_user_session_path)  %>
