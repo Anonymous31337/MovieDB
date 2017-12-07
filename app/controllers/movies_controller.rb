@@ -8,21 +8,29 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
 
-    @movies = if params[:term]
-                Movie.where('name LIKE ?', "%#{params[:term]}%")
-              else
-                Movie.all
-              end
+        if params[:keywords].present?
+          @keywords = params[:keywords]
+          movie_search_term = MovieSearchTerm.new(@keywords)
+          @movies = Movie.where(movie_search_term.where_clause, movie_search_term.where_args).order(movie_search_term.order)
+        else
+          @movies = Movie.all
+        end
 
-    @movies_with_actors = @movies.map{|movie|[movie, movie.actors]}
-    @actors = Actor.all
+    #@movies = if params[:term]
+    #            Movie.where('name LIKE ?', "%#{params[:term]}%")
+    #          else
+    #            Movie.all
+    #          end
 
-    if actor_id = params[:actor]
-      @actor = Actor.find(actor_id)
-      @movies = @actor.movies
-    else
-      @movies = Movie.all
-    end
+    #@movies_with_actors = @movies.map{|movie|[movie, movie.actors]}
+    #@actors = Actor.all
+
+    #if actor_id = params[:actor]
+    #  @actor = Actor.find(actor_id)
+    #  @movies = @actor.movies
+    #else
+    #  @movies = Movie.all
+    #end
 
   end
 
