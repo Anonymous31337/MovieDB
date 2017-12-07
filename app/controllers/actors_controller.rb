@@ -23,6 +23,7 @@ class ActorsController < ApplicationController
     end
   end
 
+
   # GET /actors/1
   # GET /actors/1.json
   def show
