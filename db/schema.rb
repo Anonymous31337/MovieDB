@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20171122200337) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "actors", force: :cascade do |t|
     t.string "name"
     t.string "fname"
@@ -22,8 +25,8 @@ ActiveRecord::Schema.define(version: 20171122200337) do
   end
 
   create_table "actors_movies", id: false, force: :cascade do |t|
-    t.integer "actor_id", null: false
-    t.integer "movie_id", null: false
+    t.bigint "actor_id", null: false
+    t.bigint "movie_id", null: false
   end
 
   create_table "genres", force: :cascade do |t|
@@ -33,8 +36,8 @@ ActiveRecord::Schema.define(version: 20171122200337) do
   end
 
   create_table "genres_movies", id: false, force: :cascade do |t|
-    t.integer "genre_id", null: false
-    t.integer "movie_id", null: false
+    t.bigint "genre_id", null: false
+    t.bigint "movie_id", null: false
   end
 
   create_table "movies", force: :cascade do |t|
