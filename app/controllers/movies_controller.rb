@@ -4,16 +4,17 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
   before_action :set_actors, only: [:show, :edit, :update, :destroy]
 
+  PAGE_SIZE = 3
   # GET /movies
   # GET /movies.json
   def index
-
+        @page = (params[:page] || 0).to_i
         if params[:keywords].present?
           @keywords = params[:keywords]
           movie_search_term = MovieSearchTerm.new(@keywords)
-          @movies = Movie.where(movie_search_term.where_clause, movie_search_term.where_args).order(movie_search_term.order)
+          @movies = Movie.where(movie_search_term.where_clause, movie_search_term.where_args).order(movie_search_term.order).offset(PAGE_SIZE * @page).limit(PAGE_SIZE)
         else
-          @movies = Movie.all
+          @movies = Movie.all.offset(PAGE_SIZE * @page).limit(PAGE_SIZE)
         end
 
     #@movies = if params[:term]
