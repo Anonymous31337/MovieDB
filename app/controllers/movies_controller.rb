@@ -12,9 +12,9 @@ class MoviesController < ApplicationController
         if params[:keywords].present?
           @keywords = params[:keywords]
           movie_search_term = MovieSearchTerm.new(@keywords)
-          @movies = Movie.where(movie_search_term.where_clause, movie_search_term.where_args).order(movie_search_term.order).offset(PAGE_SIZE * @page.limit(PAGE_SIZE))
+          @movies = Movie.where(movie_search_term.where_clause, movie_search_term.where_args).order(movie_search_term.order).offset(PAGE_SIZE * @page).limit(PAGE_SIZE)
         else
-          @movies = Movie.all
+          @movies = Movie.all.offset(PAGE_SIZE * @page).limit(PAGE_SIZE)
         end
 
     #@movies = if params[:term]
