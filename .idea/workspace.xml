@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08cde49e-c810-4072-9744-716f5d9cdfa1" name="Default" comment="">
-<<<<<<< HEAD
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/MovieDB.iml" afterPath="$PROJECT_DIR$/.idea/MovieDB.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
->>>>>>> 4e10cb99afcf6abd2fca27b812ccff75df3c8a35
-    </list>
+    <list default="true" id="08cde49e-c810-4072-9744-716f5d9cdfa1" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -24,84 +16,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="movies_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="movies_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
+            <state relative-caret-position="-270">
               <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-              <folding>
-                <marker date="1512661028491" expanded="true" signature="330:1066" ph=" ... end" />
-                <marker date="1512661028491" expanded="true" signature="1056:1059" ph="if ... end" />
-                <marker date="1512661028491" expanded="true" signature="1119:1125" ph=" ... end" />
-                <marker date="1512661028491" expanded="true" signature="1156:1185" ph=" ... end" />
-                <marker date="1512661028491" expanded="true" signature="1220:1226" ph=" ... end" />
-                <marker date="1512661028491" expanded="true" signature="1279:1777" ph=" ... end" />
-                <marker date="1512661028491" expanded="true" signature="1433:1771" ph="do ... end" />
-                <marker date="1512661028491" expanded="true" signature="1451:1763" ph="if ... end" />
-                <marker date="1512661028491" expanded="true" signature="1486:1551" ph="{ ... }" />
-                <marker date="1512661028491" expanded="true" signature="1572:1624" ph="{ ... }" />
-                <marker date="1512661028491" expanded="true" signature="1656:1671" ph="{ ... }" />
-                <marker date="1512661028491" expanded="true" signature="1692:1753" ph="{ ... }" />
-                <marker date="1512661028491" expanded="true" signature="1844:2297" ph=" ... end" />
-                <marker date="1512661028491" expanded="true" signature="1860:2291" ph="do ... end" />
-                <marker date="1512661028491" expanded="true" signature="1878:2283" ph="if ... end" />
-                <marker date="1512661028491" expanded="true" signature="2010:2075" ph="{ ... }" />
-                <marker date="1512661028491" expanded="true" signature="2096:2143" ph="{ ... }" />
-                <marker date="1512661028491" expanded="true" signature="2175:2191" ph="{ ... }" />
-                <marker date="1512661028491" expanded="true" signature="2212:2273" ph="{ ... }" />
-                <marker date="1512661028491" expanded="true" signature="2315:2422" ph=" ... end" />
-                <marker date="1512661028491" expanded="true" signature="2484:2673" ph=" ... end" />
-                <marker date="1512661028491" expanded="true" signature="2519:2667" ph="do ... end" />
-                <marker date="1512661028491" expanded="true" signature="2549:2620" ph="{ ... }" />
-                <marker date="1512661028491" expanded="true" signature="2639:2659" ph="{ ... }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/actors/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-=======
->>>>>>> 4e10cb99afcf6abd2fca27b812ccff75df3c8a35
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -213,26 +137,7 @@
               <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-<<<<<<< HEAD
-              <item name="actors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="spec" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="tmp" type="462c0819:PsiDirectoryNode" />
-=======
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
->>>>>>> 4e10cb99afcf6abd2fca27b812ccff75df3c8a35
             </path>
           </expand>
           <select />
@@ -435,35 +340,18 @@
       <workItem from="1511372198687" duration="2734000" />
       <workItem from="1512572950983" duration="286000" />
       <workItem from="1512573292641" duration="785000" />
-      <workItem from="1512745668988" duration="1270000" />
+      <workItem from="1512745668988" duration="3093000" />
     </task>
-    <task id="LOCAL-00001" summary="S007: Update actor search function (+ working country)">
-      <created>1512661404558</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1512661404558</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="45269000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1366" height="678" extended-state="0" />
-    <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20497803" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-=======
-    <option name="totallyTimeSpent" value="45683000" />
+    <option name="totallyTimeSpent" value="47506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="2560" height="1413" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10859375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
->>>>>>> 4e10cb99afcf6abd2fca27b812ccff75df3c8a35
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295107" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838285" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -679,7 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -701,7 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -723,7 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -801,14 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/actors/index.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -867,13 +744,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="120">
-          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-=======
         <state relative-caret-position="360">
-          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
->>>>>>> 4e10cb99afcf6abd2fca27b812ccff75df3c8a35
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding />
         </state>
       </provider>
