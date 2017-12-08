@@ -4,25 +4,34 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
   before_action :set_actors, only: [:show, :edit, :update, :destroy]
 
+  PAGE_SIZE = 3
   # GET /movies
   # GET /movies.json
   def index
+        @page = (params[:page] || 0).to_i
+        if params[:keywords].present?
+          @keywords = params[:keywords]
+          movie_search_term = MovieSearchTerm.new(@keywords)
+          @movies = Movie.where(movie_search_term.where_clause, movie_search_term.where_args).order(movie_search_term.order).offset(PAGE_SIZE * @page).limit(PAGE_SIZE)
+        else
+          @movies = Movie.all.offset(PAGE_SIZE * @page).limit(PAGE_SIZE)
+        end
 
-    @movies = if params[:term]
-                Movie.where('name LIKE ?', "%#{params[:term]}%")
-              else
-                Movie.all
-              end
+    #@movies = if params[:term]
+    #            Movie.where('name LIKE ?', "%#{params[:term]}%")
+    #          else
+    #            Movie.all
+    #          end
 
-    @movies_with_actors = @movies.map{|movie|[movie, movie.actors]}
-    @actors = Actor.all
+    #@movies_with_actors = @movies.map{|movie|[movie, movie.actors]}
+    #@actors = Actor.all
 
-    if actor_id = params[:actor]
-      @actor = Actor.find(actor_id)
-      @movies = @actor.movies
-    else
-      @movies = Movie.all
-    end
+    #if actor_id = params[:actor]
+    #  @actor = Actor.find(actor_id)
+    #  @movies = @actor.movies
+    #else
+    #  @movies = Movie.all
+    #end
 
   end
 

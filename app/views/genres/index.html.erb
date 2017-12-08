@@ -2,13 +2,30 @@
 
 <h1>Genres</h1>
 
-<table>
-  <thead>
+<section class="search-form">
+  <%= form_for :genre, method: :get do |f| %>
+      <div class="input-group input-group-lg">
+        <%= label_tag :keywords, nil, class: "sr-only" %>
+        <%= text_field_tag :keywords, nil,
+                           placeholder: "Genrename",
+                           class: "form-control input-lg" %>
+        <span class="input-group-btn">
+<%= submit_tag "Find Genre",
+               class: "btn btn-primary btn-lg" %>
+</span>
+      </div>
+  <% end %>
+
+</section>
+<br>
+<section class="search-result">
+  <table class="table table-dark">
+    <thead>
     <tr>
       <th>Name</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+    </thead>
 
   <tbody>
     <% @genres.each do |genre| %>
@@ -21,6 +38,7 @@
     <% end %>
   </tbody>
 </table>
+</section>
 
 <br>
 

@@ -1,16 +1,28 @@
 class ActorsController < ApplicationController
-  http_basic_authenticate_with name: "Cedric-Timethy", password: "abd", except: [:index, :show]
+  http_basic_authenticate_with name: "AWD", password: "awd", except: [:index, :show]
   before_action :set_actor, only: [:show, :edit, :update, :destroy]
 
   # GET /actors
   # GET /actors.json
   def index
-    @actors = if params[:term]
-               Actor.where('name LIKE ?', "%#{params[:term]}%")
-              else
-                Actor.all
-             end
+
+    #@actors = if params[:term]
+     #          Actor.where('name LIKE ?', "%#{params[:term]}%")
+      #        else
+       #         Actor.all
+        #      end
+
+    if params[:keywords].present?
+      @keywords = params[:keywords]
+      actor_search_term = ActorSearchTerm.new(@keywords)
+      @actors = Actor.where(actor_search_term.where_clause,
+                            actor_search_term.where_args).
+          order(actor_search_term.order)
+    else
+      @actors = Actor.all
+    end
   end
+
 
   # GET /actors/1
   # GET /actors/1.json
@@ -76,5 +88,7 @@ class ActorsController < ApplicationController
     def actor_params
       params.require(:actor).permit(:name, :fname, :birthdate, :workingcountry)
     end
+
+
 
 end

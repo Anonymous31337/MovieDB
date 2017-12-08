@@ -4,7 +4,14 @@ class GenresController < ApplicationController
   # GET /genres
   # GET /genres.json
   def index
-    @genres = Genre.all
+
+    if params[:keywords].present?
+      @keywords = params[:keywords]
+      movie_search_term = GenreSearchTerm.new(@keywords)
+      @genres = Genre.where(movie_search_term.where_clause, movie_search_term.where_args).order(movie_search_term.order)
+    else
+      @genres = Genre.all
+    end
   end
 
   # GET /genres/1
