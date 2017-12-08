@@ -14,6 +14,9 @@ class Actor < ApplicationRecord
 		end
 
 	def self.all_s
-		Actor.all.order(:name).pluck(:name).join(", ")
+		Actor.all.order(:name).pluck(:fname,  :name).join(" ")
+	end
+
+	def self.full_name
 	end
 end
