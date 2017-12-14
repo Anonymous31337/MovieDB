@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08cde49e-c810-4072-9744-716f5d9cdfa1" name="Default" comment="S007: Update actor search function (+ working country)">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/MovieDB.iml" afterPath="$PROJECT_DIR$/.idea/MovieDB.iml" />
+    <list default="true" id="08cde49e-c810-4072-9744-716f5d9cdfa1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -64,8 +62,8 @@
       <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="252">
+              <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -391,12 +389,20 @@
       <workItem from="1512572950983" duration="286000" />
       <workItem from="1512573292641" duration="785000" />
       <workItem from="1512745668988" duration="7916000" />
-      <workItem from="1513251540682" duration="1068000" />
+      <workItem from="1513251540682" duration="1483000" />
     </task>
+    <task id="LOCAL-00001" summary="Edited database.yml, .travis.yml">
+      <created>1513252693631</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1513252693631</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53460000" />
+    <option name="totallyTimeSpent" value="53875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="40" width="1358" height="1040" extended-state="0" />
@@ -450,7 +456,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="S007: Update actor search function (+ working country)" />
-    <option name="LAST_COMMIT_MESSAGE" value="S007: Update actor search function (+ working country)" />
+    <MESSAGE value="Edited database.yml, .travis.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited database.yml, .travis.yml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -794,8 +801,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="252">
+          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
           <folding />
         </state>
       </provider>
