@@ -6,8 +6,8 @@ services:
 language: generic
 
 before_script:
+ - sudo /etc/init.d/postgresql stop
  - docker-compose build
- - docker-compose up
  - docker-compose run moviedb bundle exec rails db:test:prepare
 
 script:
