@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
   before_action :set_actors, only: [:show, :edit, :update, :destroy]
 
-  PAGE_SIZE = 3
+  PAGE_SIZE = 2
   # GET /movies
   # GET /movies.json
   def index

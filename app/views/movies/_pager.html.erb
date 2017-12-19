@@ -1,19 +1,18 @@
-<nav>
-  <ul class="pager">
-  <% if page > 0 %>
-  <li class="previous">
-  <%= link_to "&larr; Previous".html_safe,
-              movies_path(keywords: keywords, page: page - 1),
-              title: "Previous Page" %>
-</li>
-
-  <% end %>
-  <% if page < pageMax %>
-  <li class="next">
-  <%= link_to "Next &rarr;".html_safe,
-              movies_path(keywords: keywords, page: page + 1),
-              title: "Next Page" %>
-</li>
-    <% end %>
-</ul>
-</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col align-self-start">
+      <% if page > 0 %>
+            <%= link_to "&larr; Previous".html_safe,
+                        movies_path(keywords: keywords, page: page - 1),
+                        title: "Previous Page", class: "btn btn-outline-dark" %>
+      <% end %>
+    </div>
+    <div class="col align-self-end">
+      <% if page < pageMax %>
+            <%= link_to "Next &rarr;".html_safe,
+                        movies_path(keywords: keywords, page: page + 1),
+                        title: "Next Page", class: "btn btn-outline-dark float-right" %>
+      <% end %>
+    </div>
+  </div>
+</div>
