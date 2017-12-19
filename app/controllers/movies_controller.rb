@@ -9,12 +9,15 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
         @page = (params[:page] || 0).to_i
+
         if params[:keywords].present?
           @keywords = params[:keywords]
           movie_search_term = MovieSearchTerm.new(@keywords)
           @movies = Movie.where(movie_search_term.where_clause, movie_search_term.where_args).order(movie_search_term.order).offset(PAGE_SIZE * @page).limit(PAGE_SIZE)
+          @pageMax = ((Movie.where(movie_search_term.where_clause, movie_search_term.where_args).count)/PAGE_SIZE).to_i
         else
           @movies = Movie.all.offset(PAGE_SIZE * @page).limit(PAGE_SIZE)
+          @pageMax = ((Movie.count)/PAGE_SIZE).to_i
         end
 
     #@movies = if params[:term]

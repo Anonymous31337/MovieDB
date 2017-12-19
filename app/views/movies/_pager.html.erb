@@ -6,11 +6,14 @@
               movies_path(keywords: keywords, page: page - 1),
               title: "Previous Page" %>
 </li>
+
   <% end %>
+  <% if page < pageMax %>
   <li class="next">
   <%= link_to "Next &rarr;".html_safe,
               movies_path(keywords: keywords, page: page + 1),
               title: "Next Page" %>
 </li>
+    <% end %>
 </ul>
 </nav>

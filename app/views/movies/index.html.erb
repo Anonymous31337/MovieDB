@@ -35,7 +35,7 @@
   </thead>
 
   <% if @movies.present? %>
-      <%= render partial: "pager", locals: { keywords: @keywords, page: @page } %>
+      <%= render partial: "pager", locals: { keywords: @keywords, page: @page, pageMax: @pageMax } %>
   <% end %>
 
   <tbody>
@@ -57,7 +57,7 @@
   </tbody>
 </table>
   <% if @movies.present? %>
-      <%= render partial: "pager", locals: { keywords: @keywords, page: @page } %>
+      <%= render partial: "pager", locals: { keywords: @keywords, page: @page, pageMax: @pageMax } %>
   <% end %>
 </section>
 
