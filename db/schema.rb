@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171122200337) do
+ActiveRecord::Schema.define(version: 20171219164311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,25 @@ ActiveRecord::Schema.define(version: 20171122200337) do
   create_table "actors_movies", id: false, force: :cascade do |t|
     t.bigint "actor_id", null: false
     t.bigint "movie_id", null: false
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "countries_movies", id: false, force: :cascade do |t|
+    t.bigint "country_id", null: false
+    t.bigint "movie_id", null: false
+  end
+
+  create_table "directors", force: :cascade do |t|
+    t.string "name"
+    t.string "fname"
+    t.date "birthdate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "genres", force: :cascade do |t|
@@ -48,6 +67,19 @@ ActiveRecord::Schema.define(version: 20171122200337) do
     t.integer "length"
     t.integer "ageres"
     t.string "synopsis"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "productions", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer "rating"
+    t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

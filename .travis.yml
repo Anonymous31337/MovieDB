@@ -1,14 +1,16 @@
 sudo: required
-
 services:
- - docker
-
+- docker
 language: generic
-
 before_script:
- - docker-compose build
- - docker-compose up
- - docker-compose run moviedb bundle exec rails db:test:prepare
-
+- sudo /etc/init.d/postgresql stop
+- docker-compose build
+- docker-compose run moviedb bundle exec rails db:test:prepare
 script:
- - docker-compose run --rm moviedb bundle exec rake spec
+- docker-compose build moviedb
+deploy:
+  provider: heroku
+  api_key:
+    secure: EdXXJKK9nwnIjzA0RY88ewMRe6IuSKW+t20jDE2i4lMGzqoJDLlPZTD8Ar99qxBTBZHLHjWVV+4IcjyCR74NIv5W+Ad7aGdeT1czswEP0kMAeTfdVnIgpztFpLOPYc3bOXXW8UCasHqmCsIDjw9m5hmViGxbXbkylr+BU04ehYfqFXni2TQZrm2uR/SAwgLtxd4jApqHObtJv0iWDg+QLz5diXuIi8s294xWpJkvPCaS5ExGJgGfzUFPJN62YRUeOTiU1fQ9bKTfZm8xbo6Md/EmXsldbtOm/q8bf5r60EGr9HCQsL25jVNSWG+cNpE7GKMQ1ZXjMjpQ0+0z9e1MxoE1t3XO4D058DfSnKPMruzOXq0kTDf4VJzt+hoDyDiycEIHfCh4dKjjY3NJuuMClmbniuQ05m2HG3egfhW2lA70BV1YjkwVGxEpIlxsLB4ZyQpz/mZyn2/s0Mc39vmdE3Ws4kfM1sfqtMcHju83W/vvRi+4TEaNSAqGBbpjKPPNgFK+Xo0eK8KjzsS21Z8TSjB8xtYXBmBv8DDsWHQjPa+DdH85ee1yZgR6h4y24Um1/M+n/FUxNaphE4Lysd4c0xqXrOBR7urPYA9dOHSm6XHIMiCT4zQ1MAGHpV9t0rXmyRYesB5xTFxDHGiKyXshv8i1AVw4S3aNmdxvsFJSnb8=
+  app: moviedb-imi
+  run: "rake db:migrate"
