@@ -2,12 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+.next, .previous {
+  color: #000 !important;
+}
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}
+
+.movie-container p, .movie-container h3, .movie-container a {
+  color: #DDD !important;
 }
 
 pre {
@@ -17,15 +23,16 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #FFF;
 
   &:visited {
     color: #666;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #666 !important;
+    background: none !important;
+    text-decoration: none !important;
   }
 }
 

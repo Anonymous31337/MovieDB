@@ -98,6 +98,7 @@ ml = Actor.create(
     workingcountry:"USA",
 )
 
+Genre.destroy_all
 ho = Genre.create(
     name: "Horror")
 
@@ -112,6 +113,16 @@ sf = Genre.create(
 
 fa = Genre.create(
     name: "Fantasy")
+
+
+Director.destroy_all
+spielberg = Director.create(
+    name: "Spielberg",
+    fname: "Steven",
+    birthdate: "1946/12/18"
+)
+
+
 
 # Schauspielern filmen zuordnen
 avatar.actors = []

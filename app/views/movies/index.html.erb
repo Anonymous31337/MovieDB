@@ -24,7 +24,7 @@
       <%= render partial: "pager", locals: { keywords: @keywords, page: @page, pageMax: @pageMax } %>
   <% end %>
     <% @movies.each do |movie| %>
-      <section class=".bg-dark" style="margin: 10px auto;">
+      <section class="bg-dark movie-container" style="margin: 10px auto; padding: 20px;">
         <div class="container">
           <div class="row">
             <div class="col-2">
