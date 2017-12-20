@@ -2,11 +2,11 @@
 
 require 'rails_helper'
 describe 's007: As a user, I can search for movies by name, so that I can choose one of them.' do
-  before :each do
-    visit "/movies"
-        #navigte to text box (via xpath?)
-        # fill text in
-       # press search
-       #have_content(searchword) --> or not depends on seeds
-  end
+
+    it "shows a search result" do
+      visit "/movies"
+      fill_in :keywords, with 'Avatar'
+      click_button 'Find Movie'
+      expect(page).to have_content('Avatar')
+    end
 end
