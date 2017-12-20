@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :ratings
+  resources :directors
+  resources :productions
+  resources :countries
   resources :genres
   devise_for :users
   resources :actors
