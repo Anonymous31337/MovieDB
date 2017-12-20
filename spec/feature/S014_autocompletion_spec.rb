@@ -1,0 +1,1 @@
+#“There are directions on how to test JavaScript on the Capybara site, and you might also need another driver, e.g. PhantomJS.”
