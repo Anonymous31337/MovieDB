@@ -60,3 +60,9 @@ gem 'jquery-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+
+gem 'imdb_poster'
+
+gem 'themoviedb'
+
+gem 'impawards'
