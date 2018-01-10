@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  http_basic_authenticate_with name: "Cedric-Timethy", password: "AWD", except: [:index, :show]
+  #http_basic_authenticate_with name: "Cedric-Timethy", password: "AWD", except: [:index, :show]
 
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
   before_action :set_actors, only: [:show, :edit, :update, :destroy]
@@ -19,6 +19,8 @@ class MoviesController < ApplicationController
           @movies = Movie.all.offset(PAGE_SIZE * @page).limit(PAGE_SIZE)
           @pageMax = ((Movie.count)/PAGE_SIZE).to_i
         end
+
+
 
     #@movies = if params[:term]
     #            Movie.where('name LIKE ?', "%#{params[:term]}%")
@@ -55,9 +57,9 @@ class MoviesController < ApplicationController
   # POST /movies
   # POST /movies.json
   def create
-    @movie = Movie.find(params[:movie_id])
+    #@movie = Movie.find(params[:movie_id])
     @movie = Movie.new(movie_params)
-    @movie.actors = Actor.s_to_actors(s_params[:actors])
+    #@movie.actors = Actor.s_to_actors(s_params[:actors])
 
     respond_to do |format|
       if @movie.save
