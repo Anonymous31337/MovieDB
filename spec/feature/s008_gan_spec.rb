@@ -6,8 +6,8 @@
 #    link && link[:target] == '_blank'
 #  end
 #end
-
-describe 's008: As a user, I can reach the website from a global area network. ' do
-  is_expected.to have_link('You need to sign in or sign up before continuing.', href: 'http://moviedb-imi.herokuapp.com/')
-  expect(find_link('You need to sign in or sign up before continuing.')[:target]).to eq('_blank')
-  end
+#
+#describe 's008: As a user, I can reach the website from a global area network. ' do
+#  is_expected.to have_link('You need to sign in or sign up before continuing.', href: 'http://moviedb-imi.herokuapp.com/')
+#  expect(find_link('You need to sign in or sign up before continuing.')[:target]).to eq('_blank')
+#  end

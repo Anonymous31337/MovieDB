@@ -12,13 +12,12 @@ describe 's003/5: privileged user', :type => :feature do
 
     # note that these are all ids rather than texts.
     fill_in 'movie_title', with: 'Disneys Eine Weihnachtsgeschichte'
-    fill_in 'movie[originaltitle]', with: 'A Christmas Carol'
-    fill_in 'movie[actors]', with: ''
-    fill_in 'movie[releaseyear]', with: 2009
-    fill_in 'movie[cover]', with: 'Url'
-    fill_in 'movie[length]', with: 96
-    fill_in 'movie[cover]', with: ''
-    fill_in 'movie[synopsis]', with: 'Weihnachten, Scrooge (böse), Geister, noch mehr Weihnachten, Scrooge (freundlich), alle glücklich'
+    fill_in 'movie_originaltitle', with: 'A Christmas Carol'
+    fill_in 'actors', with: ''
+    fill_in 'movie_releaseyear', with: '2009'
+    fill_in 'movie_length', with: '96'
+    fill_in 'movie_cover', with: ''
+    fill_in 'movie_synopsis', with: 'Weihnachten, Scrooge (böse), Geister, noch mehr Weihnachten, Scrooge (freundlich), alle glücklich'
 
     click_button 'Create Movie'
 
@@ -26,9 +25,8 @@ describe 's003/5: privileged user', :type => :feature do
     expect(page).to have_content('Disneys Eine Weihnachtsgeschichte')
     expect(page).to have_content('A Christmas Carol')
     expect(page).to have_content('')
-    expect(page).to have_content('Release year: 2009')
-    expect(page).to have_content('URL')
-    expect(page).to have_content('Movie length: 96')
+    expect(page).to have_content('2009')
+    expect(page).to have_content('96')
     expect(page).to have_content('Weihnachten, Scrooge (böse), Geister, noch mehr Weihnachten, Scrooge (freundlich), alle glücklich')
     end
   end

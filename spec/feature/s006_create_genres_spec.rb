@@ -8,13 +8,13 @@ describe 's006 As a privileged user, I can add new genres.', :type => :feature d
   end
 
   it 'add genre' do
-    visit "/genres"
+    visit "/genres/new"
 
     # note that these are all ids rather than texts.
-    fill_in 'genre_id', :with => 'Thriller'
+    fill_in 'genre_name', :with => 'Thriller'
 
     click_button 'Create Genre'
 
-    expect(page).to have_content('Genre: Thriller')
+    expect(page).to have_content('Thriller')
     end
 end

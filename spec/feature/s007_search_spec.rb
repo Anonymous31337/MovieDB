@@ -5,7 +5,7 @@ describe 's007: As a user, I can search for movies by name, so that I can choose
 
     it "shows a search result" do
       visit "/movies"
-      fill_in :keywords, with 'Avatar'
+      fill_in 'keywords', with 'Avatar'
       click_button 'Find Movie'
       expect(page).to have_content('Avatar')
     end
