@@ -10,9 +10,8 @@ describe 's009: privileged user', :type => :feature do
     it 'it can add a new director' do
       visit "/directors/new"
 
-      fill_in 'director[name]', with: 'Müller'
-      fill_in 'director[fname]', with: 'Martin'
-      fill_in 'director[birthdate]', with: '2084/10/02'
+      fill_in 'director_name', with: 'Müller'
+      fill_in 'director_fname', with: 'Martin'
 
       click_button 'Create Director'
 
