@@ -8,7 +8,7 @@ describe 's004/5: privileged user', :type => :feature do
     end
 
     it 'it can (edit/)delete a new genre' do
-      visit "/genre"
+      visit "/genres"
 
       find('a[href="#{/genres/1}"]').click 'Destroy' #wenn eine liste bei mehreren gleich buttons gefunden wird, hier nochmal ändern
 

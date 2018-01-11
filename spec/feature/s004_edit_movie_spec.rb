@@ -5,17 +5,17 @@ describe 's004/5: privileged user', :type => :feature do
               before :each do
                 user = User.create(email: 'Peter', password: 'PetersPasswort', password_confirmation: 'PetersPasswort')
                 login_as(user, :scope => :user)
+                Movie.create(title: "Avatar", originaltitle: "Avatar", releaseyear: 1994, cover: "", length: 88, ageres: 0, synopsis: "bla")
                 end
 
-    it 'it can (edit/)delete a new movie' do
-      visit "/movies"
+    it 'it can edit a new movie' do
+      visit "/movies/1/edit"
 
-      find('a[href="#{/movies/1}"]').click 'Destroy' #wenn eine liste bei mehreren gleich buttons gefunden wird, hier nochmal ändern
+      fill_in 'movie_originaltitle', with: 'Test'
 
-      #press OK
-      page.driver.browser.switch_to.alert.accept
+      click_button 'Update Movie'
 
-      expect(page).to have_no_content("Avatar")
+      expect(page).to have_content("Movie was successfully updated.")
 
     end
   end
