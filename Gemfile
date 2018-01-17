@@ -62,3 +62,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 gem 'themoviedb-api'
+
+gem 'rails-jquery-autocomplete'
+
+gem 'jquery-ui-rails'

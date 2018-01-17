@@ -8,7 +8,8 @@
         <%= label_tag :keywords, nil, class: "sr-only" %>
         <%= text_field_tag :keywords, nil,
                            placeholder: "Title, Original Title, Synopsis",
-                           class: "form-control input-lg" %>
+                           class: "form-control input-lg"  
+                           %>
         <span class="input-group-btn">
 <%= submit_tag "Find Movie",
                class: "btn btn-primary btn-lg" %>
@@ -25,18 +26,19 @@
   <% end %>
     <% @movies.each do |movie| %>
       <section class="bg-dark movie-container" style="margin: 10px auto; padding: 20px;">
-        <div class="container">
+        <div class="container" >
           <div class="row">
             <div class="col-2">
               <img src="<%= movie.cover %>" height="auto" width="100%">
             </div>
-            <div class="col-10">
+            <div class="col-10" id='movies/<%= movie.id %>'>
               <h3><%= link_to movie.title, movie %> (<%= movie.releaseyear %>)</h3>
               <p><%= movie.ageres %> <%= movie.length %> min -  </p>
               <p><%= movie.synopsis %></p>
               <p>Actors: <%= movie.actors.map(&:full_name).join(", ") %></p>
               <p>Original Title: <%= movie.originaltitle %></p>
-              <p><%= link_to 'Edit', edit_movie_path(movie) %> <%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+              <p><%= link_to 'Edit', edit_movie_path(movie) %> 
+              <text class="destroy" >Destroy</text></p>
             </div>
           </div>
         </div>
