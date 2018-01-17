@@ -19,7 +19,6 @@ class MoviesController < ApplicationController
           @movies = Movie.all.offset(PAGE_SIZE * @page).limit(PAGE_SIZE)
           @pageMax = ((Movie.count)/PAGE_SIZE).to_i
         end
-
     #@movies = if params[:term]
     #            Movie.where('name LIKE ?', "%#{params[:term]}%")
     #          else
