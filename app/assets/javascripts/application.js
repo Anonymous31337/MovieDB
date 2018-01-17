@@ -16,3 +16,20 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require jquery
+//= require jquery-ui   
+//= require jquery_ujs
+$(document).ready(function() {
+    
+    $('.destroy').on('click', function() {
+     
+        $.ajax({
+         url: $(this).parent().parent().attr('id'),
+         type: 'DELETE',
+         success: function(r) {
+ 
+         }
+        });
+     });
+    
+});
