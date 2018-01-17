@@ -26,8 +26,8 @@ thegg = Movie.create(
     synopsis:"A writer and wall street trader, Nick, finds himself drawn to the past and lifestyle of his millionaire neighbor, Jay Gatsby."
     )
 thewows = Movie.create(
-    title: "The Wolf of Wallstreet", 
-    originaltitle: "The Wolf of Wallstreet", 
+    title: "The Wolf of Wall Street",
+    originaltitle: "The Wolf of Wall Street",
     releaseyear: 2013, 
     cover:"https://images-na.ssl-images-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
     length: 180,

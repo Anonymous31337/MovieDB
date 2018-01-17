@@ -1,5 +1,4 @@
 class ActorsController < ApplicationController
-  http_basic_authenticate_with name: "AWD", password: "awd", except: [:index, :show]
   before_action :set_actor, only: [:show, :edit, :update, :destroy]
 
   # GET /actors

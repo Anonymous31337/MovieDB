@@ -42,7 +42,7 @@
 
 <p>
   <strong>Cover:</strong>
-  <img src="<%= @movie.cover %>" height="20%" >
+  <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2<%= Tmdb::Search.movie(@movie.title).results[0]["poster_path"] %>" >
 </p>
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
