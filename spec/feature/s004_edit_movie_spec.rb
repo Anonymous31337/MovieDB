@@ -10,6 +10,7 @@ describe 's004/5: privileged user', :type => :feature do
 
     it 'it can edit a new movie' do
       visit "/movies/1/edit"
+      #puts page.html
 
       fill_in 'movie_originaltitle', with: 'Test'
 
