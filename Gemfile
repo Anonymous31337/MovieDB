@@ -66,3 +66,5 @@ gem 'themoviedb-api'
 gem 'rails-jquery-autocomplete'
 
 gem 'jquery-ui-rails'
+
+gem 'simplecov'
